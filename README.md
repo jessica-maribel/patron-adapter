@@ -15,3 +15,8 @@ Se han comprado dispositivos que miden en **Celsius**, pero luego se compró un 
 Es este contexto, necesitamos una interfaz que me permita trabajar con los datos de temperatura retornados por los diferentes dispositivos de una sola manera adaptada para los sistemas internos.
 
 
+<p align="center">
+  <img src="documentacion/01-diagrama-patron-adapter.drawio.png" alt="Diagrama Composite" width="700"/>
+  <br>
+  <em>Figura 1: Diagrama del Patrón Adapter</em>
+</p>
