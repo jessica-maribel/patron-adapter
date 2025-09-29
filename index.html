@@ -2,31 +2,43 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro de Temperatura</title>
+    <title>Registro de Temperatura por Bloques</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="contenedor">
-        <h1>Registro de Temperatura por Bloques</h1>
-        <form id="formularioTemperatura">
-            <label for="bloque">Bloque:</label>
-            <input type="text" id="bloque" required>
-            
-            <label for="dispositivo">Dispositivo:</label>
-            <select id="dispositivo">
-                <option value="celsius">Celsius</option>
-                <option value="fahrenheit">Fahrenheit</option>
-            </select>
+<div class="contenedor">
+    <h1>GRUPO - 01</h1>
+    <h1>Registro de Temperatura en Edificio</h1>
+    <form id="formularioTemperatura">
+      <label for="bloque">Selecciona Bloque:</label>
+        <select id="bloque">
+            <option value="Recepción">Recepción</option>
+            <option value="Oficina A">Oficina A</option>
+            <option value="Oficina B">Oficina B</option>
+            <option value="Sala de Reuniones">Sala de Reuniones</option>
+            <option value="Almacén">Almacén</option>
+            <option value="Laboratorio">Laboratorio</option>
+            <option value="Cafetería">Cafetería</option>
+            <option value="Área de Servidores">Área de Servidores</option>
+        </select>
 
-            <label for="valor">Temperatura:</label>
-            <input type="number" id="valor" required>
-            
-            <button type="submit">Registrar</button>
-        </form>
+        <label for="dispositivo">Dispositivo:</label>
+        <select id="dispositivo">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+        </select>
 
-        <h2>Historial de Temperaturas (°C)</h2>
-        <ul id="listaTemperaturas"></ul>
-    </div>
-    <script src="app.js"></script>
+        <label for="valor">Temperatura:</label>
+        <input type="number" id="valor" required>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <h2>Historial de Temperaturas (°C)</h2>
+    <ul id="listaTemperaturas"></ul>
+</div>
+
+<script src="modelo.js"></script>
+<script src="vista.js"></script>
+<script src="controlador.js"></script>
 </body>
 </html>
