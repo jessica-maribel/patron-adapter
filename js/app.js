@@ -1,4 +1,4 @@
-// ======================= MODELO ==========================
+
 class TemperaturaModelo {
     constructor() {
         this.temperaturas = JSON.parse(localStorage.getItem('temperaturas')) || [];
@@ -47,7 +47,7 @@ class AdapterFahrenheit {
     }
 }
 
-// ======================= VISTA ==========================
+
 class Vista {
     constructor() {
         this.formulario = document.getElementById('formularioTemperatura');
@@ -83,7 +83,7 @@ class Vista {
     }
 }
 
-// ======================= CONTROLADOR ==========================
+
 class Controlador {
     constructor(modelo, vista) {
         this.modelo = modelo;
@@ -113,7 +113,7 @@ class Controlador {
     }
 }
 
-// ======================= INICIALIZACIÓN ==========================
+
 document.addEventListener('DOMContentLoaded', () => {
     const modelo = new TemperaturaModelo();
     const vista = new Vista();
