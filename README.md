@@ -8,7 +8,7 @@
 
 ---
 
-## Escenario 01:
+## Escenario 02:
 
 Supongamos que en una Empresa de almacenamiento existe la necesidad de registrar la temperatura en diferentes bloques del edificio. 
 Se han comprado dispositivos que miden en **Celsius**, pero luego se compró un dispositivo que almacenaba en **Fahrenheit**.  
