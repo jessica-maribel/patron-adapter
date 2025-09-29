@@ -1,45 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Registro de Temperatura por Bloques</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css" />
 </head>
+
 <body>
-<div class="contenedor">
-    <h1>GRUPO - 01</h1>
-    <h1>Registro de Temperatura en Edificio</h1>
-    <form id="formularioTemperatura">
-      <label for="bloque">Selecciona Bloque:</label>
-        <select id="bloque">
-            <option value="Recepción">Recepción</option>
-            <option value="Oficina Administrativa">Oficina Administrativa</option>
-            <option value="Sala de Reuniones">Sala de Reuniones</option>
-            <option value="Bodega Uno">Bodega Uno</option>
-            <option value="Bodega Dos">odega Dos</option>
-            <option value="Área de Carga">Área de Carga</option>
-            <option value="Área de Descarga">Área de Descarga</option>
-            <option value="Área de TI">Área de TI</option>
-            <option value="Cafetería">Cafetería</option>
-        </select>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="brand">GRUPO - 01</div>
+        <br><br><br>
+    </header>
 
-        <label for="dispositivo">Dispositivo:</label>
-        <select id="dispositivo">
-            <option value="celsius">Celsius</option>
-            <option value="fahrenheit">Fahrenheit</option>
-        </select>
+    <!-- Contenido principal -->
+    <main class="container">
+        <section id="inicio">
+            <h1>Registro de Temperatura en Edificio</h1>
+            <p class="sub">Captura y monitorea la temperatura por bloques. Soporta °C y °F.</p>
+        </section>
 
-        <label for="valor">Temperatura:</label>
-        <input type="number" id="valor" required>
-        <button type="submit">Registrar</button>
-    </form>
+        <section id="registro" class="card">
+            <h2>Nuevo registro</h2>
+            <form id="formularioTemperatura" class="form-grid">
+                <div class="form-control">
+                    <label for="bloque">Selecciona Bloque</label>
+                    <select id="bloque">
+                        <option value="Recepción">Recepción</option>
+                        <option value="Oficina A">Oficina A</option>
+                        <option value="Oficina B">Oficina B</option>
+                        <option value="Sala de Reuniones">Sala de Reuniones</option>
+                        <option value="Almacén">Almacén</option>
+                        <option value="Laboratorio">Laboratorio</option>
+                        <option value="Cafetería">Cafetería</option>
+                        <option value="Área de Servidores">Área de Servidores</option>
+                    </select>
+                </div>
 
-    <h2>Historial de Temperaturas (°C)</h2>
-    <ul id="listaTemperaturas"></ul>
-</div>
+                <div class="form-control">
+                    <label for="dispositivo">Dispositivo</label>
+                    <select id="dispositivo">
+                        <option value="celsius">Celsius</option>
+                        <option value="fahrenheit">Fahrenheit</option>
+                    </select>
+                </div>
 
-<script src="modelo.js"></script>
-<script src="vista.js"></script>
-<script src="controlador.js"></script>
+                <div class="form-control">
+                    <label for="valor">Temperatura</label>
+                    <input type="number" id="valor" required placeholder="Ej: 22.5" step="0.1" />
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Registrar</button>
+                    <button type="reset" class="btn-ghost">Limpiar</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="historial" class="card">
+            <h2>Historial de Temperaturas (°C)</h2>
+            <ul id="listaTemperaturas" class="list"></ul>
+        </section>
+
+        <section id="ayuda" class="card muted-card">
+            <h2>Ayuda</h2>
+            <p>Registra la temperatura seleccionando el bloque, el tipo de dispositivo (°C/°F) y el valor. El historial
+                muestra los registros en Celsius.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <small>© 2025 • GRUPO - 01 • Registro de Temperatura</small>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/modelo.js"></script>
+    <script src="js/vista.js"></script>
+    <script src="js/controlador.js"></script>
 </body>
+
 </html>
